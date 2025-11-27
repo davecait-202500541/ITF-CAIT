@@ -1,0 +1,96 @@
+/* Global layout */
+:root{
+  --bg-1: #0f1724;
+  --bg-2: #111827;
+  --accent: #ff4655;
+  --muted: #cbd5e1;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  padding:48px 20px;
+  font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg,var(--bg-1) 0%, var(--bg-2) 60%);
+  color: #e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Headings */
+h1{
+  margin:8px 0;
+  font-size:1.8rem;
+  line-height:1.1;
+  color:#ffffff;
+  text-shadow:0 4px 18px rgba(0,0,0,0.6);
+}
+
+/* Link buttons */
+a{
+  color:var(--accent);
+  text-decoration:none;
+  background:rgba(255,255,255,0.03);
+  padding:8px 14px;
+  border-radius:8px;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+a:hover{transform:translateY(-3px); box-shadow:0 10px 30px rgba(0,0,0,0.45); background:rgba(255,255,255,0.05);} 
+
+/* Container for main content to keep pages centered */
+.container{
+  width:100%;
+  max-width:900px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* Agent list styling (works with current HTML structure) */
+li{list-style:none;margin:0;padding:0;}
+/* agent names in `agent.html` are inside `li > ul` in the current markup */
+li > ul{
+  display:block;
+  background:rgba(255,255,255,0.03);
+  color:var(--muted);
+  padding:10px 14px;
+  margin:8px 0;
+  border-radius:8px;
+  min-width:220px;
+}
+
+/* Small responsive tweaks */
+@media (max-width:520px){
+  body{padding:28px 12px}
+  h1{font-size:1.4rem}
+  li > ul{min-width:160px}
+}
+
+/* Footer-ish hint */
+.hint{margin-top:18px;color:rgba(226,232,240,0.6);font-size:0.95rem}
+
+/* Video / placeholder styles for `Tutor_vid.html` */
+.video-placeholder,
+video,
+iframe{
+  width:100%;
+  max-width:900px;
+  height:420px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  color:var(--muted);
+  box-shadow:0 8px 40px rgba(2,6,23,0.6);
+  border:2px dashed rgba(255,255,255,0.03);
+  margin-top:18px;
+}
+
+.video-placeholder.small{height:220px}
+
+/* Helpful message inside placeholder */
+.video-placeholder span{font-size:1rem;opacity:0.9}
