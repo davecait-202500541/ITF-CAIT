@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Selection - VALORANT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">VALORANT</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="HowToPlay.html">How to Play</a></li>
+                <li><a href="Agents.html">Agents</a></li>
+                <li><a href="Maps.html">Maps</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+        <div class="container" style="margin-top: 2rem;">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+
+       
+        <section class="platform-section">
+            <div class="container">
+                <h1>Select Your Platform</h1>
+                <p>Choose where you want to play VALORANT:</p>
+                
+                <div class="platform-grid">
+                    <div class="platform-card">
+                        <div class="platform-icon">🖥️</div>
+                        <h2>Windows PC</h2>
+                        <p>Experience VALORANT on Windows with optimal performance and graphics</p>
+                        <a href="https://playvalorant.com/" target="_blank" class="btn-platform">Download Now</a>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">🍎</div>
+                        <h2>Mac</h2>
+                        <p>Play on macOS (Note: Mac support may vary by region)</p>
+                        <a href="https://playvalorant.com/" target="_blank" class="btn-platform">Download Now</a>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-icon">📱</div>
+                        <h2>Mobile (Coming Soon)</h2>
+                        <p>VALORANT Mobile is in development. Stay tuned for updates!</p>
+                        <button class="btn-platform" disabled>Coming Soon</button>
+                    </div>
+                </div>
+
+               
+                <div style="margin-top: 4rem; background-color: var(--light-bg); padding: 2rem; border-radius: 8px;">
+                    <h2>System Requirements</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+                        <div>
+                            <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Minimum</h3>
+                            <ul style="list-style: none; color: rgba(255, 255, 255, 0.8);">
+                                <li>✓ CPU: Intel Core 2 Duo E8400</li>
+                                <li>✓ RAM: 4GB</li>
+                                <li>✓ GPU: Intel HD Graphics 3000</li>
+                                <li>✓ Storage: 20GB SSD</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="color: var(--secondary-color); margin-bottom: 1rem;">Recommended</h3>
+                            <ul style="list-style: none; color: rgba(255, 255, 255, 0.8);">
+                                <li>✓ CPU: Intel i5-9400F</li>
+                                <li>✓ RAM: 16GB</li>
+                                <li>✓ GPU: GTX 1050 Ti or better</li>
+                                <li>✓ Storage: 20GB SSD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   
+    <footer class="footer">
+        <p>&copy; 2025 VALORANT by Riot Games. This is a fan webpage.</p>
+    </footer>
+
+    <style>
+        .platform-section {
+            background-color: var(--light-bg);
+            min-height: 80vh;
+        }
+
+        .platform-section h1 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .platform-section > div > p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .platform-card {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid rgba(253, 69, 86, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-color);
+            box-shadow: 0 8px 20px rgba(253, 69, 86, 0.3);
+        }
+
+        .platform-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .platform-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-platform {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .btn-platform:hover:not(:disabled) {
+            background-color: #ff6a74;
+            transform: translateY(-2px);
+        }
+
+        .btn-platform:disabled {
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: not-allowed;
+        }
+    </style>
+</body>
+</html>
